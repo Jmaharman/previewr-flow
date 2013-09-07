@@ -1,0 +1,12 @@
+{
+  "name": "previewr-flow",
+  "version": "0.0.0",
+  "description": "A library to help create full HTML from a json config file.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": "",
+  "author": "John Harman",
+  "license": "BSD"
+}
