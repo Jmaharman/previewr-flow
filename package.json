@@ -12,6 +12,7 @@
   "dependencies": {
     "underscore": "~1.5.2",
     "JSONSelect": "~0.4.0",
-    "cheerio": "~0.12.2"
+    "cheerio": "~0.12.2",
+    "plates": "~0.4.8"
   }
 }
