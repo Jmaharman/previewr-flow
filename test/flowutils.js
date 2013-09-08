@@ -2,7 +2,6 @@ var assert = require("assert"),
 	flowUtils = require('../lib/flowutils'),
   flowLayout = require('./data/previewr-flow-layout');
 
-// TODO: Change the json to be for tests only once settled.
 describe('flowUtils', function(){
 	describe('#flowCollector', function() {
 		it('should return null when not found', function(){

@@ -98,7 +98,7 @@ NOTE: Any files that are loaded in an action will be loaded from the root of the
 ```
 
 ###bind
-"bind" can be used to bind a plain old javascript object against HTML or a template.
+"bind" can be used to bind a plain old javascript object (or the path to a json file) against HTML. At the moment this is done using [Plates]!(https://github.com/flatiron/plates), which directly maps object properties to classes or ids. See their site for details.
 
 ```javascript
 { "load": "bar.html" },
@@ -106,10 +106,13 @@ NOTE: Any files that are loaded in an action will be loaded from the root of the
 { "appendTo": ".main-content" }
 ```
 
-NOTE: At the moment this is actually just taking the HTML in the clipboard and duplicating it as many times as there are records in the array. This needs work to do the following:
+Or if loading json from a file
 
-- [ ] Bind basic objects to HTML using class mapping or something similar, basically avoiding specialized templates.
-- [ ] Find a way of allowing developers to actually overwrite the "html templating" that we intend to create and use their own.
+```javascript
+{ "load": "bar.html" },
+{ "bind": "data/my-data.json" },
+{ "appendTo": ".main-content" }
+```
 
 ## How to create your own actions...
 
@@ -119,3 +122,4 @@ When each action is run it receives an object with a $scope property on it. This
 
 - [ ] Go through and check all areas that require better error handling
 - [ ] Find out best practice for logging and how to handle verbose and when not.
+- [ ] Find a way of allowing developers to actually overwrite the "html templating" that we intend to create and use their own.
