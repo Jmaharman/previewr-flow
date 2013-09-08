@@ -114,3 +114,8 @@ NOTE: At the moment this is actually just taking the HTML in the clipboard and d
 ## How to create your own actions...
 
 When each action is run it receives an object with a $scope property on it. This $scope object is the Cheerio document... COMPLETE THIS.
+
+##TODO
+
+- [ ] Go through and check all areas that require better error handling
+- [ ] Find out best practice for logging and how to handle verbose and when not.

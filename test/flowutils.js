@@ -40,6 +40,17 @@ describe('flowUtils', function(){
 			assert.equal(matches.length, 3);
 		})
 	})
+
+	describe('#flowRunner', function() {
+		it('running a flow that errors should be caught and null HTML returned', function(done){
+			var erroringFlow = [ { "layout": "pages/index.html" } ];
+			flowUtils.flowRunner(erroringFlow, function(err, html) {
+				assert.notEqual(err, null);
+				done();
+			});
+		})
+	})
+
 	describe('#actionKey', function() {
 		it('should return the first key of an object', function(){
 			assert.equal(flowUtils.actionKey({'test': 'value'}), 'test');
